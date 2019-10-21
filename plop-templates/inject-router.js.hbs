@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+import { Switch, withRouter, Route } from "react-router-dom";
+import {
+  /* ROUTE_INJECT_IMPORT */
+ } from "Features";
+import AuthRoutes from "./withAuth";
+import { isAuthenticated, getAccessToken, getRefreshToken } from "commons/authCookies";
+
+class IndexRouter extends Component {
+   render() {
+      return (
+         <Switch>
+           {/* ROUTE_INJECT_EXPORT */}
+         </Switch>
+      );
+   }
+}
+
+export default withRouter(IndexRouter);

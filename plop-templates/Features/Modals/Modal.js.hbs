@@ -1,0 +1,25 @@
+import React from 'react';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import {{pascalCase name}}Content from './{{pascalCase name}}Content'
+
+
+class {{pascalCase name}}Modal extends React.Component {
+
+   toggle = () => { this.props.modalToggleReset() }
+
+   render() {
+      const { isOpen, data, token } = this.props
+      return (
+         <div>
+         <Modal isOpen={isOpen} toggle={this.toggle} backdrop>
+            <ModalHeader toggle={this.toggle}>{{pascalCase name}}</ModalHeader>
+            <ModalBody>
+               <{{pascalCase name}}Content data={data} token={token} toggle={this.toggle} />
+            </ModalBody>  
+         </Modal>
+         </div>
+      );
+   }
+}
+
+export default {{pascalCase name}}Modal;
